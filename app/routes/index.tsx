@@ -1,21 +1,30 @@
 import { Form } from "@remix-run/react";
 
-
-
 function Contact() {
   return (
     <Form method="post">
       <input
-        style={{ display: "block", marginBottom: 2 }}
+        style={{ display: "block", marginBottom: 2, padding: "0.5rem" }}
         type="text"
         name="name"
       />
       <input
-        style={{ display: "block", marginBottom: 2 }}
+        style={{ display: "block", marginBottom: 2, padding: "0.5rem" }}
         type="email"
         name="email"
       />
-      <button type="submit">Stay in touch</button>
+      <button
+        style={{
+          padding: "0.5rem 1rem",
+          borderRadius: 50,
+          border: "none",
+          color: "#1d1d1d",
+          background: "lightblue",
+        }}
+        type="submit"
+      >
+        Stay in touch
+      </button>
     </Form>
   );
 }
