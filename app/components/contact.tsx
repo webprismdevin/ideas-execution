@@ -46,5 +46,6 @@ const inputStyle = {
   borderRadius: 50,
   border: "1px solid #e2e2e2",
   width: '100%',
+  maxWidth: 320,
   fontSize: 16
 };
