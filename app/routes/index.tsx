@@ -1,4 +1,17 @@
 import Contact from "~/components/contact";
+import type { V2_MetaFunction } from "@remix-run/node";
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    {
+      title: "Ideas + Execution // Devin Santamaria",
+    },
+    {
+      name: "description",
+      content: "This app is a wildly dynamic web app",
+    },
+  ];
+};
 
 export default function Index() {
   return (
@@ -6,7 +19,7 @@ export default function Index() {
       <h1>Ideas + Execution</h1>
       <p>Hi there 😊</p>
       <p>
-        If you've found this - damn, you're early. I've been running{" "}
+        If you've found this - man, you're early. I've been running{" "}
         <a href="https://webprism.co" target="_blank" rel="noreferrer">
           WEBRPISM
         </a>{" "}
