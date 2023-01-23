@@ -1,17 +1,9 @@
 import Contact from "~/components/contact";
-import type { V2_MetaFunction } from "@remix-run/node";
-
-export const meta: V2_MetaFunction = () => {
-  return [
-    {
-      title: "Ideas + Execution // Devin Santamaria",
-    },
-    {
-      name: "description",
-      content: "If you've found this - man, you're early. I've been running WEBRPISM since the end of 2019. It's finally time I build a portfolio for myself.",
-    },
-  ];
-};
+import type { MetaFunction } from "@remix-run/node";
+export const meta: MetaFunction = () => ({
+  title: "Ideas + Execution // Devin Santamaria",
+  description: "If you've found this - man, you're early. I've been running WEBRPISM since the end of 2019. It's finally time I build a portfolio for myself."
+});
 
 export default function Index() {
   return (
