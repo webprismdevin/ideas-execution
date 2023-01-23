@@ -1,24 +1,4 @@
-import { Form } from "@remix-run/react";
-
-
-
-function Contact() {
-  return (
-    <Form method="post">
-      <input
-        style={{ display: "block", marginBottom: 2 }}
-        type="text"
-        name="name"
-      />
-      <input
-        style={{ display: "block", marginBottom: 2 }}
-        type="email"
-        name="email"
-      />
-      <button type="submit">Stay in touch</button>
-    </Form>
-  );
-}
+import Contact from "~/components/contact";
 
 export default function Index() {
   return (
