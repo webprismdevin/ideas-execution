@@ -8,6 +8,28 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import type { V2_MetaFunction } from "@remix-run/node";
+
+export const meta: V2_MetaFunction = () => {
+  return [
+    {
+      title: "Ideas + Execution // Devin Santamaria",
+    },
+    {
+      name: "description",
+      content: "f you've found this - man, you're early. I've been running WEBRPISM since the end of 2019. It's finally time I build a portfolio for myself.",
+    },
+    {
+      name: "charset",
+      content: "utf-8"
+    },
+    {
+      name: "viewport",
+      content: "width=device-width,initial-scale=1"
+    }
+  ];
+};
+
 export default function App() {
   return (
     <html
@@ -15,8 +37,6 @@ export default function App() {
       style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
     >
       <head>
-        <meta name="charset" content="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
