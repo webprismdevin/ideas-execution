@@ -28,7 +28,7 @@ export default function Contact() {
           borderRadius: 50,
           border: "none",
           color: "#1d1d1d",
-          fontSize: 18
+          fontSize: 16,
           background: "lightblue",
         }}
         type="submit"
@@ -46,5 +46,5 @@ const inputStyle = {
   borderRadius: 50,
   border: "1px solid #e2e2e2",
   width: '100%',
-  fontSize: 18
+  fontSize: 16
 };
