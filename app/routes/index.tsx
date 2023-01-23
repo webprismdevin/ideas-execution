@@ -8,7 +8,7 @@ export const meta: V2_MetaFunction = () => {
     },
     {
       name: "description",
-      content: "This app is a wildly dynamic web app",
+      content: "If you've found this - man, you're early. I've been running WEBRPISM since the end of 2019. It's finally time I build a portfolio for myself.",
     },
   ];
 };
