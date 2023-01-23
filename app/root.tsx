@@ -1,4 +1,3 @@
-import type { MetaFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -9,12 +8,6 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "Ideas + Execution // Devin Santamaria",
-  viewport: "width=device-width,initial-scale=1",
-});
-
 export default function App() {
   return (
     <html
@@ -22,6 +15,8 @@ export default function App() {
       style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
     >
       <head>
+        <meta name="charset" content="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
         <Links />
       </head>
