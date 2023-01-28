@@ -27,7 +27,7 @@ export default function Blog() {
 
   return (
     <main>
-      <ul style={{ listStyle: "none", margin: 0 }}>
+      <ul style={{ listStyle: "none", padding: 0 }}>
         {data.posts.map((page) => {
           const slug = page.properties.Slug;
 
@@ -37,7 +37,7 @@ export default function Blog() {
                 style={{
                   border: "1px solid rgba(245, 245, 245)",
                   padding: "1rem 2rem",
-                  padding: 0,
+                  margin: 0,
                 }}
               >
                 <h2>{page.properties.Name.title[0].plain_text}</h2>
