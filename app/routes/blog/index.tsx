@@ -37,7 +37,7 @@ export default function Blog() {
                 style={{
                   border: "1px solid rgba(245, 245, 245)",
                   padding: "1rem 2rem",
-                  margin: 0,
+                  padding: 0,
                 }}
               >
                 <h2>{page.properties.Name.title[0].plain_text}</h2>
