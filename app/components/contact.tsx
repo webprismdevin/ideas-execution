@@ -24,12 +24,15 @@ export default function Contact() {
       />
       <button
         style={{
-          padding: "0.75rem 1.25rem",
+          padding: "0.75rem 1.5rem",
           borderRadius: 50,
           border: "none",
           color: "#1d1d1d",
           fontSize: 16,
           background: "lightblue",
+          fontWeight: "bold",
+          letterSpacing: "0.05rem",
+          textTransform: "capitalize",
         }}
         type="submit"
       >
@@ -46,5 +49,5 @@ const inputStyle = {
   borderRadius: 50,
   border: "1px solid #e2e2e2",
   minWidth: 240,
-  fontSize: 16
+  fontSize: 16,
 };
