@@ -23,29 +23,30 @@ export const loader = async () => {
 export default function Blog() {
   const data = useLoaderData<typeof loader>();
 
-  console.log(data.posts[0].properties.Name.title[0].plain_text);
-
   return (
     <main>
       <ul style={{ listStyle: "none", padding: 0 }}>
-        {data.posts.map((page) => {
+        {data.posts.map((page: any) => {
           const slug = page.properties.Slug;
 
           return (
-            <Link to={`/blog/${slug.rich_text[0].plain_text}`} key={page.id}>
-              <li
+            <li>
+              <Link
+                to={`/blog/${slug.rich_text[0].plain_text}`}
+                key={page.id}
                 style={{
                   border: "1px solid rgba(245, 245, 245)",
-                  padding: "1rem 2rem",
+                  padding: "0.75rem 2rem",
                   margin: 0,
+                  borderRadius: 2,
                 }}
               >
                 <h2>{page.properties.Name.title[0].plain_text}</h2>
                 <p>
                   {page.properties["Short description"].rich_text[0].plain_text}
                 </p>
-              </li>
-            </Link>
+              </Link>
+            </li>
           );
         })}
       </ul>

@@ -31,7 +31,7 @@ export const loader = async ({ params }: LoaderArgs) => {
     },
   });
   
-  const notionPage = postPage.results[0];
+  const notionPage:any = postPage.results[0];
   
   const postPageId = notionPage.id,
         postTitle = notionPage.properties.Name.title[0].plain_text,
@@ -50,9 +50,7 @@ export default function PostRoute() {
   const data = useLoaderData<typeof loader>();
           
   return <article style={{maxWidth: 660, margin: '0px auto'}}>
-          <h1>
-            <p>{data.page.title}</p>
-          </h1>
+          <h1>{data.page.title}</h1>
           <section>
             {data.blockMap.results.map((block: any) => (
               <Fragment key={block.id}>{renderBlock(block)}</Fragment>
