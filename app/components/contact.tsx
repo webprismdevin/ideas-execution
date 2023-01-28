@@ -22,21 +22,7 @@ export default function Contact() {
         placeholder="can I have your email?"
         name="email"
       />
-      <button
-        style={{
-          padding: "0.75rem 1.55rem",
-          borderRadius: 50,
-          border: "none",
-          fontSize: 16,
-          background: "lightblue",
-          fontWeight: "normal",
-          letterSpacing: "0.05rem",
-          textTransform: "capitalize",
-        }}
-        type="submit"
-      >
-        Stay in touch
-      </button>
+      <button type="submit">Stay in touch</button>
     </form>
   );
 }
@@ -45,7 +31,7 @@ const inputStyle = {
   display: "block",
   marginBottom: 6,
   padding: "0.75rem 1rem",
-  borderRadius: 50,
+  borderRadius: 2,
   border: "1px solid #e2e2e2",
   minWidth: 240,
   fontSize: 16,
