@@ -24,7 +24,7 @@ export default function Contact() {
       />
       <button
         style={{
-          padding: "0.75rem 1.5rem",
+          padding: "0.75rem 1.55rem",
           borderRadius: 50,
           border: "none",
           color: "#1d1d1d",
