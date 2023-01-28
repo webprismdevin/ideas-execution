@@ -8,6 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import sharedStyles from "./shared.css";
+
 import type { MetaFunction } from "@remix-run/node";
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -54,3 +56,7 @@ const headerFooterStyles = {
   alignItems: "center",
   gap: 12,
 };
+
+export function links() {
+  return [{ rel: "stylesheet", href: sharedStyles }];
+}
