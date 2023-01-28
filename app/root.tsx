@@ -12,7 +12,6 @@ import {
 import sharedStyles from "./shared.css";
 
 import type { MetaFunction } from "@remix-run/node";
-import { useLayoutEffect } from "react";
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   viewport: "width=device-width,initial-scale=1",
@@ -21,14 +20,10 @@ export const meta: MetaFunction = () => ({
 export default function App() {
   const navigation = useNavigation();
 
-  useLayoutEffect(() => {
-    console.log(navigation.state);
-  }, [navigation]);
-
   return (
     <html
       lang="en"
-      style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}
+      style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.6" }}
     >
       <head>
         <Meta />

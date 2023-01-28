@@ -30,10 +30,9 @@ export default function Blog() {
           const slug = page.properties.Slug;
 
           return (
-            <li>
+            <li key={page.id}>
               <Link
                 to={`/blog/${slug.rich_text[0].plain_text}`}
-                key={page.id}
                 style={{
                   border: "1px solid rgba(245, 245, 245)",
                   padding: "0.75rem 2rem",
