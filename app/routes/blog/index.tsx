@@ -1,7 +1,6 @@
 import { json } from "@remix-run/node"; // or cloudflare/deno
 import { Client } from "@notionhq/client";
 import { Link, useLoaderData } from "@remix-run/react";
-import styles from "./index.css";
 
 export const loader = async () => {
   const notion = new Client({
@@ -34,7 +33,13 @@ export default function Blog() {
 
           return (
             <Link to={`/blog/${slug.rich_text[0].plain_text}`} key={page.id}>
-              <li className="blog_item">
+              <li
+                style={{
+                  border: "1px solid rgba(245, 245, 245)",
+                  padding: "1rem 2rem",
+                  margin: 0,
+                }}
+              >
                 <h2>{page.properties.Name.title[0].plain_text}</h2>
                 <p>
                   {page.properties["Short description"].rich_text[0].plain_text}
@@ -46,8 +51,4 @@ export default function Blog() {
       </ul>
     </main>
   );
-}
-
-export function links() {
-  return [{ rel: "stylesheet", href: styles }];
 }

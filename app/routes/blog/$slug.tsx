@@ -7,7 +7,7 @@ import { Client } from "@notionhq/client";
 import { Fragment } from "react";
 import type { MetaFunction } from "@remix-run/node";
 import renderBlock from "~/components/renderBlock";
-import styles from "./text.css";
+import styles from "~/styles/text.css";
 
 export const meta: MetaFunction = ({ data }) => ({
   title: `${data.page.title} // Devin Santamaria`,
