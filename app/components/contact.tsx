@@ -27,10 +27,9 @@ export default function Contact() {
           padding: "0.75rem 1.55rem",
           borderRadius: 50,
           border: "none",
-          color: "#1d1d1d",
           fontSize: 16,
           background: "lightblue",
-          fontWeight: "bold",
+          fontWeight: "normal",
           letterSpacing: "0.05rem",
           textTransform: "capitalize",
         }}

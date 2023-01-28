@@ -77,6 +77,7 @@ const renderBlock = (block: any) => {
           style={{
             background: colors[value.color],
             padding: "0.5rem 1rem",
+            borderRadius: 2,
           }}
         >
           {value.icon.type === "emoji" ? (

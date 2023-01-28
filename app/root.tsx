@@ -6,17 +6,25 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useNavigation,
 } from "@remix-run/react";
 
 import sharedStyles from "./shared.css";
 
 import type { MetaFunction } from "@remix-run/node";
+import { useLayoutEffect } from "react";
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
   viewport: "width=device-width,initial-scale=1",
 });
 
 export default function App() {
+  const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    console.log(navigation.state);
+  }, [navigation]);
+
   return (
     <html
       lang="en"
@@ -34,7 +42,9 @@ export default function App() {
           </nav>
         </header>
         <div
-          style={{ padding: "1rem 3rem", maxWidth: 1440, margin: "0px auto" }}
+          className={`outlet_wrapper ${
+            navigation.state === "loading" ? "fadeout" : "fadein"
+          }`}
         >
           <Outlet />
         </div>
