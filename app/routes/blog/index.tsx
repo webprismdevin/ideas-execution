@@ -37,7 +37,9 @@ export default function Blog() {
           if (!slug || !short_description || !title) return null;
 
           return (
-            <li key={page.id}>
+            <li key={page.id} style={{
+              marginBottom: '3rem'
+            }}>
               <Link
                 to={`/blog/${slug}`}
                 style={{

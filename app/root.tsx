@@ -34,6 +34,7 @@ export default function App() {
           <nav style={headerFooterStyles}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/work">Work</NavLink>
           </nav>
         </header>
         <div
