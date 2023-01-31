@@ -41,7 +41,7 @@ export default function Blog() {
               marginBottom: '3rem'
             }}>
               <Link
-                to={`/blog/${slug}`}
+                to={`${slug}`}
                 style={{
                   border: "1px solid rgba(245, 245, 245)",
                   padding: "0.75rem 2rem",

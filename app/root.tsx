@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
   useNavigation,
 } from "@remix-run/react";
+import { inject } from '@vercel/analytics';
 
 import sharedStyles from "./shared.css";
 
@@ -19,6 +20,9 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   const navigation = useNavigation();
+  const production = process.env.NODE_ENV === "production" ? true : false;
+  
+  if(production) inject();
 
   return (
     <html
@@ -28,12 +32,13 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        {production && <script defer data-domain="devinsantamaria.com"   src="/stats/js/script.js" data-api="/stats/api/event"></script>}
       </head>
       <body>
         <header>
           <nav style={headerFooterStyles}>
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/blog">Blog</NavLink>
+            <NavLink to="/essays">Essays</NavLink>
             <NavLink to="/work">Work</NavLink>
           </nav>
         </header>
