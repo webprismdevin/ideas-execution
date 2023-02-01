@@ -1,6 +1,7 @@
 import { json } from "@remix-run/node"; // or cloudflare/deno
 import { Client } from "@notionhq/client";
 import { Link, useLoaderData } from "@remix-run/react";
+import styles from "~/styles/essays.css";
 
 export const loader = async () => {
   const notion = new Client({
@@ -27,7 +28,7 @@ export default function Blog() {
 
   return (
     <main>
-      <ul style={{ listStyle: "none", padding: 0 }}>
+      <ul className="post_grid" style={{ listStyle: "none", padding: 0 }}>
         {data.posts.map((page: any) => {
           const slug = page.properties.Slug.rich_text[0]?.plain_text,
             short_description =
@@ -37,9 +38,12 @@ export default function Blog() {
           if (!slug || !short_description || !title) return null;
 
           return (
-            <li key={page.id} style={{
-              marginBottom: '3rem'
-            }}>
+            <li
+              key={page.id}
+              style={{
+                marginBottom: "3rem",
+              }}
+            >
               <Link
                 to={`${slug}`}
                 style={{
@@ -58,4 +62,8 @@ export default function Blog() {
       </ul>
     </main>
   );
+}
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
 }

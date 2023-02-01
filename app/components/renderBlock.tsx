@@ -58,7 +58,7 @@ const renderBlock = (block: any) => {
         </details>
       );
     case "child_page":
-      return <p>{value.title}</p>;
+      return null;
     case "image":
       const src =
         value.type === "external" ? value.external.url : value.file.url;
