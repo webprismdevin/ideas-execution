@@ -20,7 +20,11 @@ export const loader = async () => {
   return json({ posts: workDb.results });
 };
 
-export default function Work() {
+export default function Endeavors() {
+  const data = useLoaderData<typeof loader>();
+
+  console.log(data);
+    
   return (
     <main>
       <h1>Career, Consulting & Company</h1>
