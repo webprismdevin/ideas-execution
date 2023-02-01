@@ -24,7 +24,7 @@ export default function Endeavors() {
   const data = useLoaderData<typeof loader>();
 
   console.log(data);
-    
+
   return (
     <main>
       <h1>Career, Consulting & Company</h1>
