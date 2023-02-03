@@ -16,6 +16,12 @@ export const loader = async () => {
         equals: "Posted",
       },
     },
+    sorts: [
+      {
+        property: "Published",
+        direction: "descending",
+      },
+    ],
   });
 
   return json({ posts: blogDb.results });

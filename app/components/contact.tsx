@@ -1,6 +1,9 @@
 export default function Contact() {
   return (
-    <form action="https://submit-form.com/JZojw5Xb">
+    <form
+      action="https://submit-form.com/JZojw5Xb"
+      data-botpoison-public-key0="pk_f7d9a478-bf2d-4ae9-9227-cc4cc2fcbc4e"
+    >
       <input
         type="hidden"
         name="_redirect"
@@ -14,12 +17,14 @@ export default function Contact() {
         style={inputStyle}
         type="text"
         placeholder="what's your name?"
+        required
         name="name"
       />
       <input
         style={inputStyle}
         type="email"
-        placeholder="can I have your email?"
+        placeholder="enter your email address"
+        required
         name="email"
       />
       <button type="submit">Stay in touch</button>

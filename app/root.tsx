@@ -33,12 +33,15 @@ export default function App() {
         <Meta />
         <Links />
         {production && (
-          <script
-            defer
-            data-domain="devinsantamaria.com"
-            src="/stats/js/script.js"
-            data-api="/stats/api/event"
-          ></script>
+          <>
+            <script
+              defer
+              data-domain="devinsantamaria.com"
+              src="/stats/js/script.js"
+              data-api="/stats/api/event"
+            ></script>
+            <script src="https://unpkg.com/@botpoison/browser" async></script>
+          </>
         )}
       </head>
       <body>
