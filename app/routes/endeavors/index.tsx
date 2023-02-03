@@ -31,27 +31,41 @@ export default function Endeavors() {
       <h1>Career, Consulting & Company</h1>
       <p>I'm going to try to detail all the stuff I've done.</p>
       <hr />
-      {work.map((item: any) => (
-        <ul key={item.id}>
-          <li>
-            <h2>{item.properties.Name.title[0].plain_text}</h2>
-            <div style={{ display: "flex", flexWrap: "wrap" }}>
-              {item.properties.Tags.multi_select.map((tag: any) => (
-                <code
-                  style={{
-                    background: tag.color,
-                    marginRight: 8,
-                    padding: "0px 4px",
-                    borderRadius: 2,
-                  }}
-                >
-                  {tag.name}
-                </code>
-              ))}
-            </div>
-          </li>
-        </ul>
-      ))}
+      {work.map((item: any) => {
+        const { Name: name, Tags: tags } = item.properties;
+        const { id, cover } = item;
+
+        return (
+          <ul key={id}>
+            <li>
+              {cover !== null && cover.file && (
+                <div style={{ maxWidth: "100%" }}>
+                  <img
+                    src={cover.file?.url}
+                    alt={`${name} cover photo`}
+                    style={{ objectFit: "contain", maxWidth: "100%" }}
+                  />
+                </div>
+              )}
+              <h2>{name.title[0].plain_text}</h2>
+              <div style={{ display: "flex", flexWrap: "wrap" }}>
+                {tags.multi_select.map((tag: any) => (
+                  <code
+                    style={{
+                      background: tag.color,
+                      marginRight: 8,
+                      padding: "0px 4px",
+                      borderRadius: 2,
+                    }}
+                  >
+                    {tag.name}
+                  </code>
+                ))}
+              </div>
+            </li>
+          </ul>
+        );
+      })}
     </main>
   );
 }

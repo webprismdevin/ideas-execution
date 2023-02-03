@@ -14,12 +14,14 @@ export default function Contact() {
         style={inputStyle}
         type="text"
         placeholder="what's your name?"
+        required
         name="name"
       />
       <input
         style={inputStyle}
         type="email"
-        placeholder="can I have your email?"
+        placeholder="enter your email address"
+        required
         name="email"
       />
       <button type="submit">Stay in touch</button>
