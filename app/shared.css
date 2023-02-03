@@ -3,6 +3,18 @@
   --brand_dark: #1d1d1d;
 }
 
+nav a {
+  margin-right: 1rem;
+}
+
+nav a:first-child {
+  margin-left: 1rem;
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
 a {
   text-decoration: none;
 }

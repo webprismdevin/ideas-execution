@@ -1,17 +1,10 @@
 export default function Contact() {
   return (
-    <form
-      action="https://submit-form.com/JZojw5Xb"
-      data-botpoison-public-key0="pk_f7d9a478-bf2d-4ae9-9227-cc4cc2fcbc4e"
-    >
+    <form action="https://submit-form.com/JZojw5Xb">
       <input
         type="hidden"
         name="_redirect"
-        value={
-          process.env.NODE_ENV === "development"
-            ? "https://nqgser-3000.preview.csb.app/"
-            : "https://devin.webprism.xyz/"
-        }
+        value="https://devin.webprism.xyz/"
       />
       <input
         style={inputStyle}

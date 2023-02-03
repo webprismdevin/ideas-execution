@@ -15,14 +15,17 @@ export default function Index() {
       <p>
         If you've found this - man, you're early. I've been running{" "}
         <a href="https://webprism.co" target="_blank" rel="noreferrer">
-          WEBRPISM
+          WEBPRISM
         </a>{" "}
         since the end of 2019. It's finally time I build a portfolio for myself.
       </p>
       <p>Why am I building this? Two reasons:</p>
       <ol>
-        <li>I want to experiment with Remix</li>
+        <li>
+          I want to experiment with <a href="https://remix.run/">Remix</a>
+        </li>
         <li>I'm a marketing professional. It makes sense to market myself.</li>
+        <li>I like to write. It's human. I need somewhere to put it.</li>
       </ol>
       <p>What will exist here?</p>
       <ul>
