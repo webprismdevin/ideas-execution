@@ -51,7 +51,7 @@ export default function App() {
       <body>
         <header style={headerFooterStyles}>
           <img src={Initials} height={36} width={36} />
-          <nav>
+          <nav style={{ flexShrink: 0 }}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/essays">Essays</NavLink>
             <NavLink to="/endeavors">Endeavors</NavLink>
@@ -106,7 +106,7 @@ const headerFooterStyles = {
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "center",
-  gap: 12,
+  gap: "1rem",
 };
 
 export function links() {
