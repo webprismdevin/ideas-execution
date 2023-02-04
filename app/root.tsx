@@ -49,14 +49,14 @@ export default function App() {
         )}
       </head>
       <body>
-        <header style={headerFooterStyles}>
+        <header>
           <img src={Initials} height={36} width={36} />
           <nav style={{ flexShrink: 0 }}>
             <NavLink to="/">Home</NavLink>
             <NavLink to="/essays">Essays</NavLink>
             <NavLink to="/endeavors">Endeavors</NavLink>
           </nav>
-          <div>
+          <div className="social_icons">
             <a href="https://www.instagram.com/santamaria.devin/">
               <img
                 style={{ margin: "0 0.25rem" }}

@@ -1,0 +1,16 @@
+.home_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.home_content--latest_post {
+  flex-shrink: 2;
+}
+
+@media screen and (min-width: 810px) {
+  .home_content {
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+}
