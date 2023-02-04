@@ -3,16 +3,22 @@
   --brand_dark: #1d1d1d;
 }
 
-nav a {
-  margin-right: 1rem;
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
-nav a:first-child {
-  margin-left: 1rem;
+.social_icons {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-nav a:last-child {
-  margin-right: 0;
+nav {
+  display: flex;
+  gap: 1rem;
 }
 
 a {
@@ -116,6 +122,18 @@ input:focus {
 
 .outlet_wrapper.fadein {
   opacity: 1;
+}
+
+.line_clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 700px;
+  margin: 0px auto;
 }
 
 @media screen and (max-width: 465px) {

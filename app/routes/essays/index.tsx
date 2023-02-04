@@ -2,6 +2,7 @@ import { json } from "@remix-run/node"; // or cloudflare/deno
 import { Client } from "@notionhq/client";
 import { Link, useLoaderData } from "@remix-run/react";
 import styles from "~/styles/essays.css";
+import Post from "~/components/post";
 
 export const loader = async () => {
   const notion = new Client({
@@ -41,6 +42,12 @@ export default function Blog() {
               page.properties["Short description"].rich_text[0]?.plain_text,
             title = page.properties.Name.title[0]?.plain_text;
 
+          const post = {
+            slug,
+            title,
+            short_description,
+          };
+
           if (!slug || !short_description || !title) return null;
 
           return (
@@ -50,18 +57,7 @@ export default function Blog() {
                 marginBottom: "3rem",
               }}
             >
-              <Link
-                to={`${slug}`}
-                style={{
-                  border: "1px solid rgba(245, 245, 245)",
-                  padding: "0.75rem 2rem",
-                  margin: 0,
-                  borderRadius: 2,
-                }}
-              >
-                <h2>{title}</h2>
-                <p>{short_description}</p>
-              </Link>
+              <Post post={post} />
             </li>
           );
         })}
