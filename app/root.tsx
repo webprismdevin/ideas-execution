@@ -59,7 +59,7 @@ export default function App() {
           <div className="social_icons">
             <a href="https://www.instagram.com/santamaria.devin/">
               <img
-                style={{ margin: "0 0.25rem" }}
+                // style={{ margin: "0 0.25rem" }}
                 src={Instagram}
                 height={24}
                 width={24}
@@ -67,7 +67,7 @@ export default function App() {
             </a>
             <a href="https://www.linkedin.com/in/devinsantamaria/">
               <img
-                style={{ margin: "0 0.25rem" }}
+                // style={{ margin: "0 0.25rem" }}
                 src={LinkedIn}
                 height={24}
                 width={24}
@@ -75,7 +75,7 @@ export default function App() {
             </a>
             <a href="https://twitter.com/devinsantamaria">
               <img
-                style={{ margin: "0 0.25rem" }}
+                // style={{ margin: "0 0.25rem" }}
                 src={Twitter}
                 height={24}
                 width={24}

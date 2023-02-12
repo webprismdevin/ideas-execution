@@ -12,7 +12,7 @@ export default function Post({ post }: { post: PostType }) {
 
   return (
     <Link
-      to={`${slug}`}
+      to={`/essays/${slug}`}
       style={{
         border: "1px solid rgba(245, 245, 245)",
         padding: "0.75rem 2rem",
