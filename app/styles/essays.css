@@ -5,7 +5,7 @@ ul {
   align-items: stretch;
 }
 
-li > a {
+li a {
   height: 100%;
 }
 

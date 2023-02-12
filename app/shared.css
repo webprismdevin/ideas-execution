@@ -40,7 +40,7 @@ a.active::after {
 }
 
 a {
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   color: var(--brand_blue);
 }

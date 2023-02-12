@@ -13,13 +13,16 @@ export default function Post({ post }: { post: PostType }) {
   return (
     <Link
       to={`/essays/${slug}`}
-      style={{
+    >
+      <div
+        style={{
         border: "1px solid rgba(245, 245, 245)",
         padding: "0.75rem 2rem",
         margin: 0,
         borderRadius: 2,
+        height: '100%'
       }}
-    >
+      >
       <h2>{title}</h2>
       <p className="line_clamp">{short_description}</p>
       <div
@@ -27,11 +30,11 @@ export default function Post({ post }: { post: PostType }) {
           display: "flex",
           alignItems: "center",
           color: "var(--brand_dark)",
-          float: "right",
         }}
       >
         <span>Read</span>
         <img src={ArrowRight} height={18} width={18} />
+      </div>
       </div>
     </Link>
   );
