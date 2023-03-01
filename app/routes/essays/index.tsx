@@ -1,8 +1,9 @@
 import { json } from "@remix-run/node"; // or cloudflare/deno
-import { Client } from "@notionhq/client";
+import { Client, LogLevel } from "@notionhq/client";
 import { Link, useLoaderData } from "@remix-run/react";
 import styles from "~/styles/essays.css";
 import Post from "~/components/post";
+import { useEffect } from "react";
 
 export const loader = async () => {
   const notion = new Client({
@@ -32,6 +33,29 @@ export default function Blog() {
   const data = useLoaderData<typeof loader>();
 
   console.log(data);
+
+  const notion = new Client({
+    auth: "secret_yrURRd4CeMVmBRLwLbfnzrUauTGCrx055y8HWZLG49v",
+    logLevel: LogLevel.DEBUG,
+  });
+
+  const getData = async () => {
+    const response = await notion.databases.query({
+      database_id: "b3d77622ce8f420bb2b843b265727e59",
+      filter: {
+        property: "Approved",
+        checkbox: {
+          equals: true,
+        },
+      },
+    });
+
+    return response;
+  };
+
+  useEffect(() => {
+    getData().then((res) => console.log(res));
+  }, [])
 
   return (
     <main>
